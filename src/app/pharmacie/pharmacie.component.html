@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--========== BOX ICONS ==========-->
+
+        <title>Responsive sidebar submenus</title>
+    </head>
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <img src="../../assets/imp/home.png" alt="" class="header__img">
+
+                <a href="#"   class="header__logo">  InfoCovidMada </a>
+    
+                <div class="header__search">
+                    <input type="search" placeholder="Search" class="header__input">
+                    <i class='bx bx-search header__icon'></i>
+                </div>
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" style="background-color: #b2ebf2;" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a routerLink="/" class="nav__link nav__logo">
+                        <img class=' nav__icon'  style="width:20px"  src="../../assets/imp/home.png" alt="" >
+                        <span class="nav__logo-name">InfoCovidMada</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Menu</h3>
+                            
+                            <a routerLink="/" class="nav__link ">
+                                <img class=' nav__icon'  style="width:20px"  src="../../assets/imp/usermember.png" alt="" >
+                                <span class="nav__name">Accueil</span>
+                            </a>
+                            <a href="#" class="nav__link ">
+                                <img class=' nav__icon'  style="width:20px"  src="../../assets/imp/usermember.png" alt="" >
+                                <span class="nav__name">Statistiques</span>
+                            </a>
+                            <a routerLink="Liste-pharmacies-garde-Antananarivo" class="nav__link active">
+                                <img class=' nav__icon'  style="width:20px"  src="../../assets/imp/usermember.png" alt="" >
+                                <span class="nav__name">Liste des pharmacies</span>
+                            </a>
+                            
+                            <a routerLink="/Liste-Centres-Traitement-Covid-19"class="nav__link">
+                                <img class=' nav__icon'  style="width:20px"  src="../../assets/imp/cashback.png" alt="" >
+                                <span class="nav__name">Liste des CTC-19</span>
+                            </a>
+
+                            <a routerLink="/Liste-Hôtels-Hôpitaux-Covid-19" class="nav__link">
+                                <img class=' nav__icon'  style="width:20px"  src="../../assets/imp/cashback.png" alt="" >
+                                <span class="nav__name">Liste des HH</span>
+                            </a>
+                        </div>
+    
+                    </div>
+                </div>
+
+                <a href="#" class="nav__link nav__logout">
+                    <img class=' nav__icon'  style="width:20px"  src="../../assets/imp/logout.png" alt="" >
+                    <span class="nav__name">Tsiky Navalona</span>
+                </a>
+            </nav>
+        </div>
+
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section>
+                <div class="box" style="margin-top:55px;width:1000px;height:auto">
+                    <h1 style="font-size:1.5em">Liste des pharmacies de garde à Antananarivo </h1>
+                    <h2 style="font-size:1em">Voici une liste de pharmacie ouverte 7/7j 24/24h </h2> 
+                    <ul class="collection with-header" style="margin-top:50px;width:50%;margin-left : 240px" *ngFor = "let item of list_pharmacie">
+                        <li class="collection-header"><h4>{{item.nomPharmacie}}</h4></li>
+                        <li class="collection-item">Lieu : {{item.lieuPharmacie}} </li>
+                        <li class="collection-item">Numero : {{item.numTelephone}}</li>
+                    </ul> 
+                </div>
+            </section>
+        </main>
+
+        <!--========== MAIN JS ==========-->
+    </body>
+</html>
