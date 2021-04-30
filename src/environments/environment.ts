@@ -6,8 +6,8 @@ export const environment = {
   production: false
 };
 
-export const base_url = 'http://localhost/InfoCovidMada/api/';
-
+//export const base_url = 'http://localhost/InfoCovidMada/api/';
+export const base_url = 'http://tsiky.alwaysdata.net/InfoCovidMada/api/';
 
 /*
  * For easier debugging in development mode, you can import the following file
