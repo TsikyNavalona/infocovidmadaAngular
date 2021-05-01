@@ -1,0 +1,107 @@
+.session {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: 560px;
+    margin: auto auto;
+    background-color: white;
+    border-radius: 4px;
+    margin-top : 70px;
+    box-shadow: 0px 2px 6px -1px black ;
+}
+.left {
+    width: 320px;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+    background-image: url(../../assets/imp/banner.jpg);
+    background-size: cover; 
+    /*background-color: black;*/
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+.right {
+    width: 520px;
+    height: auto;
+    min-height: 100%;
+    position: relative;
+    background-size: cover;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+input {
+    border: none;
+}
+.input {
+  width: 40%;
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin-bottom: 37px;
+}
+.input100 {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.2;
+  display: block;
+  width: 60%;
+  height: 45px;
+  background: transparent;
+  padding: 0 5px;
+}
+.input:hover{
+    border-bottom: 2px solid #9fa8da;
+}
+.label-input{
+    margin-right:340px;
+    font-size:18px;
+    text-decoration:underline;
+    font-family:Arial, Helvetica, sans-serif;
+    opacity: 0.65;
+    margin-bottom: 4px;
+    color:#757575;
+}
+.button-css{
+    -webkit-appearance: none;
+    width: auto;
+    min-width: 100px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 40px;
+    margin-top: 5px;
+    background-color: #aee571;
+    color: #fff;
+    font-size: 14px;
+    margin-left: auto;
+    font-weight: 500;
+    box-shadow: 0px 2px 6px -1px rgb(0 0 0 / 13%);
+    border: none;
+    transition: all 0.3s ease;
+    outline: 0;
+}
+.button-css:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px -1px rgb(182 157 230 / 65%);
+}
+
+.button-css-red{
+    -webkit-appearance: none;
+    width: auto;
+    min-width: 100px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 40px;
+    margin-top: 5px;
+    background-color: #dc3545;
+    color: #fff;
+    font-size: 14px;
+    margin-left: auto;
+    font-weight: 500;
+    box-shadow: 0px 2px 6px -1px rgb(0 0 0 / 13%);
+    border: none;
+    transition: all 0.3s ease;
+    outline: 0;
+}
+.button-css-red:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px -1px rgb(182 157 230 / 65%);
+}

@@ -10,6 +10,11 @@ import { HomeComponent } from './home/home.component';
 import { PharmacieComponent } from './pharmacie/pharmacie.component';
 import { CTCComponent } from './ctc/ctc.component';
 import { HHComponent } from './hh/hh.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
+import { AdminPharmacieComponent } from './admin-pharmacie/admin-pharmacie.component';
+import { AdminCtcComponent } from './admin-ctc/admin-ctc.component';
+import { AdminHhComponent } from './admin-hh/admin-hh.component';
 
 
 
@@ -20,6 +25,11 @@ import { HHComponent } from './hh/hh.component';
     PharmacieComponent,
     CTCComponent,
     HHComponent,
+    AdminLoginComponent,
+    AdminHomeComponent,
+    AdminPharmacieComponent,
+    AdminCtcComponent,
+    AdminHhComponent,
   ],
   imports: [
     BrowserModule,

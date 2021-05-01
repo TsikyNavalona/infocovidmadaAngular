@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
   date:string='';
   list_donnee_covid : any = [];
   error_msg:string = '';
-  resultListMonde = {} ;
-  resultListMada = {};
+  resultListMonde = '' ;
+  resultListMada = '';
 
   constructor(private titleService:Title,private metaService:Meta,public helperServ : HelperService) {
     this.titleService.setTitle("InfoCovidMada : Madagascar et le monde"); 

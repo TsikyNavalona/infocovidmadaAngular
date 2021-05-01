@@ -31,15 +31,14 @@ export class HelperService {
     var month = currentDate.getMonth() + 1
     var year = currentDate.getFullYear();
     let newdate = null;
-    if(month <10){  
+    if(month <10 && day > 10){  
       newdate = year + "-0" + month + "-" + day;
     }
-    else if(day <10){
+    else if(day <10 && month > 10){
       newdate = year + "-" + month + "-0" + day;
     }
     else if(day <10 && month <10){
       newdate = year + "-0" + month + "-0" + day;
-
     }
     else{
       newdate = year + "-" + month + "-" + day;

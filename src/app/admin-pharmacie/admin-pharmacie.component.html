@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste Plan Comptable</title>
+</head>
+<body style="background-color: #f2f2f2;">
+    <div  class="box mt-5 mb-5 mx-auto" style="width :1160px;height: auto">
+    <a routerLink="/InfoCovidMada-Admin-Home" style="margin-right:1000px"><button class="btn btn-outline-danger">Quitter</button></a><br/>
+        <b style="color:black;font-size:35px;font-family:Century Gothic" >  Gestion Pharmacie </b>
+            <div class="row mt-4">
+                <div class="form-group col-3">
+                    <input type="text" class="form-control" [(ngModel)] = "nom" [ngModelOptions]="{standalone: true}" placeholder="Nom Pharmacie " required >
+                </div>
+                <div class="form-group col-3">
+                    <input type="text" class="form-control" [(ngModel)] = "lieu" [ngModelOptions]="{standalone: true}" placeholder="Lieu Pharmacie " required>
+                </div>
+                <div class="form-group col-3">
+                    <input type="tel" class="form-control" [(ngModel)] = "num" [ngModelOptions]="{standalone: true}" placeholder="Telephone (10 chiffres)" required>
+                </div>
+                <div class="form-group col-3">
+                    <input type="submit"  (click) = "insertPharmacie()" style="width : 105px" class="form-control btn btn-outline-dark" value="Valider">
+                </div>
+            </div>
+            <p style="color:red">{{ error_msg }}</p>
+            <p style="color:green">{{ message }}</p>
+        <table class="table  mt-5" >
+            <thead>
+                <tr style="background-color :#adc3c6">
+                    <th scope="col">Nom Pharmacie</th>
+                    <th scope="col">Lieu Pharmacie</th>
+                    <th scope="col">Numero telephone</th>
+                    <th scope="col">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let item of list_pharmacie">
+                    <td><b> {{item.nomPharmacie}}</b> </td>	
+                    <td>{{item.lieuPharmacie}}</td>	
+                    <td>{{item.numTelephone}}</td>	
+                    <td><button class="btn btn-outline-danger" (click) = "deletePharmacie(item.idPharmacie)">Supprimer</button></td>	
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
