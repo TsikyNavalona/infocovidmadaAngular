@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HelperService } from '../services/helper.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import {Meta ,Title} from "@angular/platform-browser";
 import { PharmacieService } from '../services/pharmacie.service';
 
 
@@ -17,7 +18,10 @@ export class AdminPharmacieComponent implements OnInit {
   error_msg:string = '';
   message:string ='';
   list_pharmacie : any = [];
-  constructor(private activatedRoute: ActivatedRoute,public pharmacieServ : PharmacieService,public helperServ : HelperService, public router : Router) { }
+  constructor(private titleService:Title,private metaService:Meta,private activatedRoute: ActivatedRoute,public pharmacieServ : PharmacieService,public helperServ : HelperService, public router : Router) {
+    this.titleService.setTitle("InfoCovidMada : Gesion Pharmacie"); 
+    this.metaService.updateTag({name:'description',content:"Ajouter ou supprimer des pharmacies à Antananarivo"}); 
+   }
 
   ngOnInit(): void {
     this.afficherPharmacie();

@@ -1,1 +1,42 @@
-<p>admin-hh works!</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+</head>
+<body>
+    <div  class="box mt-5 mb-5 mx-auto" style="width :1160px;height: auto">
+    <a routerLink="/InfoCovidMada-Admin-Home" style="margin-right:1000px"><button class="btn btn-outline-danger">Quitter</button></a><br/>
+        <b style="color:black;font-size:35px;font-family:Century Gothic" >  Gestion Hôtels-Hôpitaux Covid-19 </b>
+            <div class="row mt-4">
+                <div class="form-group col-4">
+                    <input type="text" class="form-control" [(ngModel)] = "nomCentreTraitement" [ngModelOptions]="{standalone: true}" placeholder="Nom CTC-19 " required >
+                </div>
+                <div class="form-group col-4">
+                    <input type="text" class="form-control" [(ngModel)] = "lieuCentreTraitement" [ngModelOptions]="{standalone: true}" placeholder="Lieu CTC-19 " required>
+                </div>
+                <div class="form-group col-4">
+                    <input type="submit"  (click) = "insertHh()" style="width : 105px" class="form-control btn btn-outline-dark" value="Valider">
+                </div>
+            </div>
+            <p style="color:red">{{ error_msg }}</p>
+            <p style="color:green">{{ message }}</p>
+        <table class="table  mt-5" >
+            <thead>
+                <tr style="background-color :#aee571">
+                    <th scope="col">Nom HH</th>
+                    <th scope="col">Lieu HH</th>
+                    <th scope="col">ACTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let item of list_Hh">
+                    <td><b> {{item.nomCentreTraitement}}</b> </td>	
+                    <td>{{item.lieuCentreTraitement}}</td>	
+                    <td><button class="btn btn-outline-danger" (click) = "deleteHh(item.idCentreTraitement)">Supprimer</button></td>	
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

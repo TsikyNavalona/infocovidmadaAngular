@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HelperService } from '../services/helper.service';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import {Meta ,Title} from "@angular/platform-browser";
 import { AdminUserService } from '../services/admin-user.service';
 
 
@@ -16,7 +17,10 @@ export class AdminLoginComponent implements OnInit {
   password : string = '';
   message : string = '';
   error_msg:string = '';
-  constructor(private activatedRoute: ActivatedRoute,public adminUserServ : AdminUserService,public helperServ : HelperService, public router : Router) { }
+  constructor(private titleService:Title,private metaService:Meta,private activatedRoute: ActivatedRoute,public adminUserServ : AdminUserService,public helperServ : HelperService, public router : Router) {
+    this.titleService.setTitle("InfoCovidMada : Connexion mode Admin"); 
+    this.metaService.updateTag({name:'description',content:"Passer en mode Admin pour la gestion d'InfoCovidMada"}); 
+   }
 
   ngOnInit(): void {
   }

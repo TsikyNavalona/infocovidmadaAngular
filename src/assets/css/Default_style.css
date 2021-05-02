@@ -14,7 +14,7 @@ body
     margin: auto;
     background-color: #Fff;
     border-radius: 10px;
-    box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
     height:740px;
 }
 .taille
@@ -51,7 +51,7 @@ input {
 }
 .mini .mini-content .mini-box {
     display: block;
-    background: #adc3c6;
+    background: #aee571;
     padding: 20px;
     border-radius: 20px;
     box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);

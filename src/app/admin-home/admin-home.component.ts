@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Meta ,Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-admin-home',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private titleService:Title,private metaService:Meta) {
+    this.titleService.setTitle("InfoCovidMada : Home mode Admin"); 
+    this.metaService.updateTag({name:'description',content:"Home en mode Admin pour la gestion d'InfoCovidMada"}); 
+   }
 
   ngOnInit(): void {
   }
