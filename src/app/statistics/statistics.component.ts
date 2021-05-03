@@ -11,6 +11,7 @@ import {Title , Meta} from "@angular/platform-browser";
 })
 export class StatisticsComponent implements OnInit {
   havedate = false;
+  dateCovid="";
   date ="";
   newConfirmedMada = '';
   newConfirmedWorld = '';
