@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { PharmacieService } from '../services/pharmacie.service';
+import { HelperService } from '../services/helper.service';
 import { Router } from '@angular/router';
-import {Title} from "@angular/platform-browser";
+import {Title, Meta} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-pharmacie',
@@ -11,10 +12,14 @@ import {Title} from "@angular/platform-browser";
 })
 export class PharmacieComponent implements OnInit {
   
+  date = this.helperServ.getTodayDate();
   list_pharmacie : any = [];
   error_msg:string = '';
-  constructor(private titleService:Title,public pharmacieServ : PharmacieService, public router : Router) {
-    this.titleService.setTitle("InfoCovidMada : Liste des Pharmacies de garde");  }
+  constructor(private titleService:Title,public pharmacieServ : PharmacieService, public router : Router,public helperServ : HelperService,private metaService:Meta) {
+    this.titleService.setTitle("InfoCovidMada : Liste des Pharmacies de garde");
+    this.metaService.updateTag({name:'description',content:'Voici une liste des pharmacie à Antananarivo'});
+  
+  }
 
   ngOnInit(): void {
     this.afficherPharmacie();

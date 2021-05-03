@@ -15,6 +15,7 @@ import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminPharmacieComponent } from './admin-pharmacie/admin-pharmacie.component';
 import { AdminCtcComponent } from './admin-ctc/admin-ctc.component';
 import { AdminHhComponent } from './admin-hh/admin-hh.component';
+import { StatisticsComponent } from './statistics/statistics.component';
 
 
 
@@ -30,6 +31,7 @@ import { AdminHhComponent } from './admin-hh/admin-hh.component';
     AdminPharmacieComponent,
     AdminCtcComponent,
     AdminHhComponent,
+    StatisticsComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,9 @@ import { CTCComponent } from './ctc/ctc.component';
 import { HHComponent } from './hh/hh.component';
 import { HomeComponent } from './home/home.component';
 import { PharmacieComponent } from './pharmacie/pharmacie.component';
+import { StatisticsComponent } from './statistics/statistics.component';
+
+
 
 const routes: Routes = [{
    path: '',
@@ -42,6 +45,9 @@ const routes: Routes = [{
   },{
     path: 'InfoCovidMada-Admin-Hh',
     component: AdminHhComponent,
+  },{
+    path: 'InfoCovidMada-Statistique/:date',
+    component: StatisticsComponent,
   }
 ];
 

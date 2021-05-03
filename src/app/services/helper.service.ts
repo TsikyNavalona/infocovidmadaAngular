@@ -46,7 +46,7 @@ export class HelperService {
     }
     return newdate;
   }
-  covidMada(){
-    return this.http.get('https://api.covid19tracking.narrativa.com/api/'+this.getTodayDate()+'/country/madagascar');
+  covidMada(date : string){
+    return this.http.get('https://api.covid19tracking.narrativa.com/api/'+date+'/country/madagascar');
   }
 }

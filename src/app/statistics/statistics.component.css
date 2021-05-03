@@ -1,0 +1,199 @@
+
+@import url("../../assets/css/sidebar.css");
+@import url("../../assets/css/Default_style.css");
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(26, 54, 126, 0.125);
+    border-radius: 0.25rem;
+}
+.collection {
+    margin: 0.5rem 0 1rem 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+.collection.with-header .collection-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+  }
+  
+  .collection.with-header .collection-item {
+    padding-left: 30px;
+  }
+  
+  .collection.with-header .collection-item.avatar {
+    padding-left: 72px;
+  }
+  
+.collection.with-header .collection-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 10px 20px;
+  }
+  .collection .collection-item {
+    background-color: #fff;
+    line-height: 1.5rem;
+    padding: 10px 20px;
+    margin: 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .collapsible .collection {
+    margin: 0;
+    border: none;
+  }
+  
+ul:not(.browser-default) {
+    padding-left: 0;
+    list-style-type: none;
+  }
+  
+  ul:not(.browser-default) > li {
+    list-style-type: none;
+  }
+  
+.flex-container {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .flex-container > div {
+    background-color: #fafafa;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    border-radius:  1%;
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /* word-wrap: break-word; */
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+.no-shadow {
+    box-shadow: 0 0 0 transparent !important;
+}
+.rm-border {
+    border-width: 0 !important;
+}
+.bg-transparent {
+    background: transparent !important;
+}
+.widget-chart.text-left {
+    flex-direction: row;
+    align-items: center;
+}
+.icon-wrapper {
+    width: 104px;
+    height: 104px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.icon-wrapper .icon-wrapper-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+    opacity: .2;
+}
+.opacity-10 {
+    opacity: 1 !important;
+}
+.bg-warning {
+    background-color: #f7b924 !important;
+}
+.icon-wrapper i {
+    margin: 0 auto;
+    font-size: 1.7rem;
+    position: relative;
+    z-index: 5;
+}
+.opacity-8 {
+    opacity: .8 !important;
+}
+.text-dark {
+    color: #343a40 !important;
+}
+.widget-chart.text-left .widget-chart-content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex: 1;
+    position: relative;
+}
+.widget-chart .widget-chart-content {
+    position: relative;
+    z-index: 5;
+}
+.widget-chart .widget-subheading:first-child {
+    margin-top: 0;
+}
+.widget-chart .widget-subheading {
+    margin: -0.5rem 0 0;
+    display: block;
+    opacity: .6;
+    color: #343a40;
+    font-size: 25px;
+}
+.widget-chart.text-left .widget-numbers {
+    margin-left: 0;
+}
+.widget-chart .widget-subheading+.widget-numbers {
+    margin-top: .5rem;
+}
+.widget-chart .widget-numbers {
+    font-weight: bold;
+    font-size: 2.5rem;
+    display: block;
+    line-height: 1;
+    margin: 1rem auto;
+}
+.widget-chart.text-left .widget-chart-content .widget-description {
+    align-self: flex-start;
+}
+.widget-chart .widget-description {
+    margin: 1rem 0 0;
+}
+
+.button-css{
+    -webkit-appearance: none;
+    width: auto;
+    min-width: 100px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 15px 40px;
+    background-color: #aee571;
+    color: #fff;
+    font-size: 14px;
+    margin-left: auto;
+    font-weight: 500;
+    box-shadow: 0px 2px 6px -1px rgb(0 0 0 / 13%);
+    border: none;
+    transition: all 0.3s ease;
+    outline: 0;
+}
+.button-css:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 2px 6px -1px rgb(182 157 230 / 65%);
+}
